@@ -66,7 +66,7 @@ public class ToDoList implements ActionListener {
 		}
 		if(e.getSource().equals(save)) {
 			try {
-				FileWriter fw = new FileWriter("src/_03_To_Do_List/TODOLIST.txt", true);
+				FileWriter fw = new FileWriter("src/_03_To_Do_List/DoingList.txt", true);
 				for(int i = 0; i < buttons.size(); i++) {
 					fw.write("\n " + buttons.get(i));
 					
@@ -81,7 +81,7 @@ public class ToDoList implements ActionListener {
 		if(e.getSource().equals(load)) {
 			String location = JOptionPane.showInputDialog(null, "What is the location of your file?");
 			try {
-				BufferedReader br = new BufferedReader(new FileReader(location + "TODOLIST.txt"));
+				BufferedReader br = new BufferedReader(new FileReader(location + "DoingList.txt"));
 				
 				String line = br.readLine();
 				buttons.add(line);
@@ -124,3 +124,4 @@ public class ToDoList implements ActionListener {
 	 */
 	
 }
+
